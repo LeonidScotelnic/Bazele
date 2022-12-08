@@ -1,0 +1,11 @@
+program n11;
+  var nr, s, nr2: integer;
+begin
+  nr:=100;
+  s:=0;
+while nr < 1000 do  
+  begin
+    if sqr(nr div 10) - sqr(nr mod 10) = nr then writeln(nr);
+    nr:= nr + 1;
+  end;
+end.

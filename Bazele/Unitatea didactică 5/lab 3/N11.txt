@@ -1,0 +1,22 @@
+program n11;
+var s, h1, h2, h3:real;
+begin
+  write('Dati h1 ');
+  readln(h1);
+  write('Dati h2 ');
+  readln(h2);
+  write('Dati h3 ');
+  readln(h3);  
+  if (h1 > h2) and (h1 > h3) and (h2> h3) then
+    writeln('Ionel, Gigel, Danut');
+  if (h1 > h2) and (h1 > h3) and (h2 < h3) then 
+     writeln('Ionel, Danut, Gigel');
+  if (h1 < h2) and (h2 > h3) and (h1 < h3) then 
+     writeln('Gigel, Danut, Ionel');
+   if (h1 < h2) and (h2 > h3) and (h1 > h3) then 
+    writeln('Gigel, Ionel, Danut');
+   if (h1 < h3) and (h2 < h3) and (h1 > h2) then 
+    writeln('Danut, Ionel, Gigel');  
+   if (h1 < h3) and (h2 < h3) and (h1 < h2) then 
+    writeln('Danut, Gigel, Ionel');  
+end.

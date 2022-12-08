@@ -1,0 +1,26 @@
+program n13;
+var n, k, x, i, s: integer;
+function sum_cif(k:integer):integer;
+var s:integer;
+begin
+  s:=0;
+  while k<>0 do
+    begin
+      s:= s + (k mod 10);
+      k:= k div 10;
+    end;  
+    sum_cif:= s;
+end;
+begin
+  writeln('Dati n: ');
+  readln(n);
+  writeln('Dati x: ');
+  readln(x);  
+  writeln('Dati numerele: ');
+  for i:=1 to n do
+  begin
+    readln(k);
+      s:= sum_cif(k);
+      if s = x then writeln('Suma cifrelor coincide',k);
+  end;
+end.

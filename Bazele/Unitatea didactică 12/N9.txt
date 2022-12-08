@@ -1,0 +1,57 @@
+program n9;
+type 
+  Meniu = record
+    Denumire: String[20];
+    Pret: real;
+    Calorii: real;
+    end;
+    menu = array [1..100] of Meniu;
+var m: menu;
+    inter: Meniu;
+    i, n: integer;
+    min: real;
+    DenumireMin: string;
+begin
+  write('dati n: ');
+  readln(n);
+  for i:= 1 to n do
+  begin
+    writeln('Introduceti datele meniului:');
+    write('Denumire: ');
+    readln(m[i].Denumire);
+    write('Pret: ');
+    readln(m[i].Pret); 
+    write('Calorii: ');
+    readln(m[i].Calorii);
+  end;
+  write('Produsele cu continutul minim de calorii: ');
+  min:= m[1].Pret;
+  DenumireMin:= m[1].Denumire;
+  for i:= 1 to n do
+  begin
+    if m[i].Pret <= min then 
+    begin
+      min:= m[i].Pret;
+      DenumireMin:= m[i].Denumire;
+      end;
+  end;
+  writeln(DenumireMin,' ', min);
+  
+  writeln;
+  for i:= 1 to n do
+    writeln(m[i].Denumire);
+  writeln;
+  
+  writeln('Lista produselor ordonate crescator: ');
+ for j:= 1 to n do 
+  for i:= 1 to n do 
+    if  m[i].Pret > m[i+1].Pret then 
+    begin
+      inter:= m[i];
+      m[i]:= m[i+1];
+      m[i+1]:= inter;
+    end;
+  
+  for i:= 1 to n do
+    writeln(m[i].Denumire);
+end.

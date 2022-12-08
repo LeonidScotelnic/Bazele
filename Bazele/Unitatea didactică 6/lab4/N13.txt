@@ -1,0 +1,22 @@
+program n13;
+  var nr, s, nr2, nr3: integer;
+begin
+  nr:=1000;
+while nr < 10000 do  
+  begin
+    nr2 := nr;
+    nr2:= nr2 div 10;
+    if (nr2 mod 10 = 2) and (nr2 div 100 = 3) then
+      begin
+      nr3:= nr;
+        while nr3 <> 0 do
+         begin
+           s:= s + (nr3 mod 10);
+          nr3:= nr3 div 10;
+         end;
+        if s mod 9 = 0 then writeln(nr);
+      end;
+    nr:= nr + 1;
+    s:=0;
+  end;
+end.

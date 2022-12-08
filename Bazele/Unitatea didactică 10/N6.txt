@@ -1,0 +1,12 @@
+program n6;
+type sir = String[255];
+var sir1: sir;
+    i, count, m: integer;
+begin
+  writeln('Introduceti un text: ');
+  readln(sir1);
+  m:= sir1.length div 2;
+  for i:= 1 to m do
+    if sir1[i] = sir1[sir1.length-i+1] then count:= count + 1;
+  if count = m then write('palindrom') else write('nu este palindrom');
+end.

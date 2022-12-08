@@ -1,0 +1,26 @@
+program n4;
+type sir = String[255];
+var sir1: sir;
+    i, countv, countc: integer;
+begin
+  writeln('Introduceti un text: ');
+  readln(sir1);
+  countv:=0;
+  countc:=0;
+  for i:= 1 to length(sir1) do
+    if (sir1[i] = 'a') or (sir1[i] = 'e') or (sir1[i] = 'u') or  (sir1[i] = 'o') or  (sir1[i] = 'i') then 
+     begin
+      countv:= countv+1;
+      write(sir1[i]);
+     end;
+  writeln;
+  writeln(countv);
+    for i:= 1 to length(sir1) do
+    if (sir1[i] <> 'a') and (sir1[i] <> 'e') and (sir1[i] <> 'u') and  (sir1[i] <> 'o') and  (sir1[i] <> 'i') then 
+     begin
+      countc:= countc+1;
+      write(sir1[i]);
+     end;
+  writeln;
+  writeln(countc);
+end.

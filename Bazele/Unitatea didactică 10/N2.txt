@@ -1,0 +1,16 @@
+program n2;
+type sir = String[255];
+var sir1: sir;
+    i: integer;
+    c1, c2: char;
+begin
+  writeln('Introduceti un text: ');
+  readln(sir1);
+  write('Dati c1: ');
+  readln(c2);
+  write('Dati c2: ');
+  readln(c1);
+  for i:= 1 to length(sir1) do
+    if sir1[i] = c1 then sir1[i]:= c2;
+  writeln(sir1);
+end.

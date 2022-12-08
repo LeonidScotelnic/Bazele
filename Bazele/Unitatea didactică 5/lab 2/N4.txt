@@ -1,0 +1,14 @@
+program n4;
+var a, b, m, r: real;
+begin
+  write('Dati a:');
+  readln(a);
+  write('Dati b:');
+  readln(b); 
+  writeln('Ce doriti sa calculati, media aritmetica(1) sau geometrica(2)?');
+  readln(r);
+  if r = 1 then m:= (a + b)/2
+  else if (r = 2) and (a >=0) and (b >= 0) then m:= sqrt(a*b)
+  else writeln('Raspns Incorect');
+  writeln(m);
+end.

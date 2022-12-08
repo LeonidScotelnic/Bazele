@@ -1,0 +1,47 @@
+program n3;
+type 
+  Student = record
+    Nume: String[20];
+    An: byte;
+    Media: real;
+    Grupa: string;
+    end;
+    lista_studenti = array [1..100] of Student;
+var ls: lista_studenti;
+    i, n: integer;
+    maxNume: string;
+    max: real;
+begin
+  write('dati n: ');
+  readln(n);
+  for i:= 1 to n do
+  begin
+    writeln('Introduceti datele persoanelor:');
+    write('Nume: ');
+    readln(ls[i].Nume);
+    write('An: ');
+    readln(ls[i].An); 
+    write('Media: ');
+    readln(ls[i].Media);
+    write('Grupa: ');
+    readln(ls[i].Grupa);
+  end;
+  write('Elevii cu media peste 8.50 din anul 3: ');
+  for i:= 1 to n do
+  begin
+    if (ls[i].An = 3) and (ls[i].Media > 8.5) then
+      writeln(ls[i].Nume);
+  end;
+  max:= ls[1].Media;
+  maxNume:= ls[1].Nume;
+  for i:= 1 to n do
+  begin
+    if max < ls[i].Media then 
+    begin 
+      max:= ls[i].Media;
+      maxNume:= ls[i].Nume;
+    end;
+  end;
+  writeln('Elevul cu cea mai mare medie: ');
+  writeln(maxNume,' - ', max);
+end.

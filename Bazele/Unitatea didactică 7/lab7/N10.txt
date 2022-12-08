@@ -1,0 +1,19 @@
+program n10;
+var n: integer;
+function verif(n:integer):string;
+var p:integer;
+begin
+  p:=0;
+  n:= n div 1000;
+while n<>0 do
+begin
+  if (n mod 10) mod 2 <> 0 then p:=p+1;
+  n:=n div 10;
+end;
+if p = 3 then verif:='da' else verif:= 'nu';
+end;
+begin
+  writeln('Dati n: ');
+  readln(n);
+  writeln('Primele trei cifre ale numarului ',n ,' sunt impare?: ',verif(n));
+end.

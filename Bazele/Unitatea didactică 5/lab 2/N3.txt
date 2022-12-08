@@ -1,0 +1,48 @@
+program n3;
+var x, c1, c2, c3:integer;
+begin
+  write('Dati x din 3 cifre:');
+  readln(x);
+   c1:= x mod 10;
+   x:= x div 10;
+   c2:= x mod 10;
+   x:= x div 10;
+   c3:= x mod 10;
+
+   if (c1 > c2) and (c1 > c3) and (c2 > c3) then 
+     begin
+     write (c1);
+     write (c2);
+     write (c3);
+     end;
+   if (c1 > c2) and (c1 > c3) and (c2 < c3) then 
+     begin
+     write (c1);
+     write (c3);
+     write (c2);
+     end;
+  if (c1 < c2) and (c2 > c3) and (c1 < c3) then 
+     begin
+     write (c2);
+     write (c3);
+     write (c1);
+     end;
+   if (c1 < c2) and (c2 > c3) and (c1 > c3) then 
+     begin
+     write (c2);
+     write (c1);
+     write (c3);
+     end;
+   if (c1 < c3) and (c2 < c3) and (c1 > c2) then 
+     begin
+     write (c3);
+     write (c1);
+     write (c2);
+     end;  
+   if (c1 < c3) and (c2 < c3) and (c1 < c2) then 
+     begin
+     write (c3);
+     write (c2);
+     write (c1);
+     end;  
+end.

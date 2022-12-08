@@ -1,0 +1,12 @@
+program n4;
+var n: integer;
+begin
+  write('Dati n: ');
+  readln(n);
+  case n of
+    12,1,2: writeln('iarna');
+    3,4,5: writeln('primavara'); 
+    6,7,8: writeln('vara');
+    9,10,11: writeln('toamna');
+  end;
+end.

@@ -1,0 +1,20 @@
+program n12;
+  var nr, s, nr2, k: integer;
+begin
+  writeln('dati k: ');
+  readln(k);
+  nr:=10;
+  s:=0;
+while nr < 100 do  
+  begin
+    nr2:= nr;
+    while nr2 <> 0 do
+    begin
+      s:= s + (nr2 mod 10);
+      nr2:= nr2 div 10;
+    end;
+    if s = k then writeln (nr, ' suma cifrelor este egala cu: ', k);
+    nr:= nr + 1;
+    s:=0;
+  end;
+end.

@@ -1,0 +1,11 @@
+program n10;
+var s, p, m5, m3:real;
+begin
+  write('Dati s ');
+  readln(s);
+  m5 := s / 5;
+  s := s - m5 * 5;
+  m3 := s / 3;
+  s := s - m3 * 3;
+ writeln(s);
+end.

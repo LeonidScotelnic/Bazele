@@ -1,0 +1,13 @@
+program n2;
+var a, b, c:integer;
+begin
+  write('Dati a:');
+  readln(a);
+  write('Dati b:');
+  readln(b);
+  write('Dati c:');
+  readln(c);
+  if (a = b) and (b = c) then writeln('triunghi echilateral');
+  if (a = b) or (b = c) or (c = a)then writeln('triunghi isoscel')
+  else writeln('triunghi oarecare');
+end.
